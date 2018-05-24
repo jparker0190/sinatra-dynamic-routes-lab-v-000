@@ -11,7 +11,8 @@ class App < Sinatra::Base
     erb :square
   end
   get '/say/:number/:phrase' do
-    @num = [:phrase].count
-    "#{@num}"
+    @number = params[:number].to_i
+    @phrase = params[:phrase]
+    erb :say
   end
 end
