@@ -7,9 +7,8 @@ class App < Sinatra::Base
     @name.reverse
   end
   get '/square/:number' do
-    @num = params[:number] * params[:number]
-    @num1 = @num.to_i
-    "#{@num1}"
+    @num = params[:number].to_i
+    erb :square
   end
   get '/say/:number/:phrase' do
     @num = [:phrase].count
