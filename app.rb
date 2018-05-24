@@ -13,4 +13,5 @@ class App < Sinatra::Base
   get '/say/:number/:phrase' do
     @num = [:phrase].count
     "#{@num}"
+  end
 end
